@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <!-- Bootstap CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sh84-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js" integrity="sh84-YvpcrYf0tlHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Bootstap Icon Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Css Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title mt-5">Useful Club Library For You!</h1>
+            <p>Discover creative, academic, and athletic clubs that match your interests and help you learn, grow, and connect</p>
+            <a href="#start"><button type="button" class="explore"><span class="btn-span-class">Get Started</span></button></a>
+        </div>
+    </header>
+
+    <nav class="nav mb-5" id="start">
+        <a href="#" onclick="filterBoxes('art')"><i class="bi bi-brush"></i>Art & Creativity</a>
+        <a href="#" onclick="filterBoxes('academic')"><i class="bi bi-book"></i>Academic & STEM</a>
+        <a href="#" onclick="filterBoxes('sport')"><i class="bi bi-bicycle"></i>Sport & Fitness</a>
+
+        <a href="#" onclick="showAll()">Show All</a>
+ 
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." onkeyup="search_club()" aria-label="Search" id="search_input">
+            <button><i class="bi bi-search"></i></button>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row justify-content-evenly">
+            <div class="col-lg-5 col-10 cut mb-3" data-category="art" data-name="art club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/art.jpg" alt="Art Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Art Club</h5>
+                        <p class="item-description mb-0">A place for creative students to express themselves through drawing, painting, and other visual arts</p>
+                        <p class="rating mb-3 mt-0">★★★★★ 5 ratings</p>
+                        <a href="https://www.lakecatholic.org/student-life/art-club.cfm" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="art" data-name="music club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/music.png" alt="Music Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Music Club</h5>
+                        <p class="item-description mb-0">Brings together students who love singing or playing instruments to create and enjoy music</p>
+                        <p class="rating mb-3 mt-0">★★★★★ 5 ratings</p>
+                        <a href="https://crownpoint.sandiegounified.org/music/music_club" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="art" data-name="drama club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/drama.png" alt="Drama Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Drama Club</h5>
+                        <p class="item-description mb-0">Allows students to explore acting, stage performance, and film or theatre production</p>
+                        <p class="rating mb-3 mt-0">★★★★★ 5 ratings</p>
+                        <a href="https://dramastartbooks.com/2023/11/18/drama-club-toolkit-starting-and-running-a-school-drama-club/" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="art" data-name="dance club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/dance.png" alt="Dance Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Dance Club</h5>
+                        <p class="item-description mb-0">Encourages students to learn and perform different dance styles while building confidence</p>
+                        <p class="rating mb-3 mt-0">★★★★ 4 ratings</p>
+                        <a href="https://www.citchennai.edu.in/campus-life/clubs/dance-club/" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="art" data-name="photography club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/photo.jpg" alt="Photography Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Photography Club</h5>
+                        <p class="item-description mb-0">Teaches how to capture meaningful moments and improve their photography skills.</p>
+                        <p class="rating mb-3 mt-0">★★★★ 4 ratings</p>
+                        <a href="https://theindianpublicschool.org/school-photography-club-and-its-importance/" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="art" data-name="craft club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/craft.png" alt="Craft Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Craft Club</h5>
+                        <p class="item-description mb-0">Focuses on making creative handmade using various materials and techniques</p>
+                        <p class="rating mb-3 mt-0">★★★★ 4 ratings</p>
+                        <a href="https://www.juyingsec.moe.edu.sg/cca/clubs-n-societies/art-n-craft-club/" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="academic" data-name="coding club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/coding.png" alt="Coding Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Coding Club</h5>
+                        <p class="item-description mb-0">Introduces programming and helps students develop problem-solving and tech skills</p>
+                        <p class="rating mb-3 mt-0">★★★★★ 5 ratings</p>
+                        <a href="https://www.create-learn.us/blog/high-school-coding-club-activities/" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="academic" data-name="robotics club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/robotic.png" alt="Robotics Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Robotics Club</h5>
+                        <p class="item-description mb-0">Combines creativity and engineering to design and build robots for fun or competitions</p>
+                        <p class="rating mb-3 mt-0">★★★★ 4 ratings</p>
+                        <a href="https://www.create-learn.us/blog/high-school-coding-club-activities/" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="academic" data-name="mathletes club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/math.jpg" alt="Mathletes Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Mathletes Club</h5>
+                        <p class="item-description mb-0">Challenges students with problem-solving, logic games, and math competitions</p>
+                        <p class="rating mb-3 mt-0">★★★★ 4 ratings</p>
+                        <a href="https://www.rowlandhs.org/apps/pages/mathclub" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="academic" data-name="book club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/book.png" alt="Book Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Book Club</h5>
+                        <p class="item-description mb-0">Encourages reading and discussion of different books, sharing thoughts and ideas</p>
+                        <p class="rating mb-3 mt-0">★★★★★ 5 ratings</p>
+                        <a href="https://www.nwea.org/blog/2025/the-power-of-a-school-book-club/" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="academic" data-name="debate club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/debate.jpg" alt="Debate Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Debate Club</h5>
+                        <p class="item-description mb-0">Develops critical thinking and public speaking through organized discussions on various topics</p>
+                        <p class="rating mb-3 mt-0">★★★★ 4 ratings</p>
+                        <a href="https://www.pacificamerican.org/debate-club/" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="academic" data-name="storytelling club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/story.jpg" alt="Storytelling Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Storytelling Club</h5>
+                        <p class="item-description mb-0">Inspires imagination and creativity through writing and sharing original stories</p>
+                        <p class="rating mb-3 mt-0">★★★★★ 5 ratings</p>
+                        <a href="https://ncte.org/blog/2017/10/raising-voices-creating-storytelling-club/" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="sport" data-name="soccer club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/soccer.jpg" alt="Soccer Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Soccer Club</h5>
+                        <p class="item-description mb-0">Promotes teamwork, discipline, and sportsmanship through playing and practicing soccer</p>
+                        <p class="rating mb-3 mt-0">★★★★★ 5 ratings</p>
+                        <a href="https://thundersoccerclub.org/info-for-parents/what-is-a-soccer-club" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="sport" data-name="basketball club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/basketball.jpg" alt="Basketball Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Basketball Club</h5>
+                        <p class="item-description mb-0">Builds teamwork and coordination while improving basketball skills and strategy</p>
+                        <p class="rating mb-3 mt-0">★★★★ 4 ratings</p>
+                        <a href="https://www.allisonacademy.com/basketball-club/" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="sport" data-name="running club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/runnning.jpg" alt="Running Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Running Club</h5>
+                        <p class="item-description mb-0">Focuses on fitness and endurance through regular running activities and events</p>
+                        <p class="rating mb-3 mt-0">★★★★ 4 ratings</p>
+                        <a href="https://smaschool.org/athletics/running-club/" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 col-10 cut mb-3" data-category="sport" data-name="fitness club">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-4 col-5 item-image mb-3">
+                        <img src="Image/fitness.jpg" alt="Fitness Club">
+                    </div>
+                    <div class="col-md-8 col-7 item-details">
+                        <h5 class="item-title">Fitness Club</h5>
+                        <p class="item-description mb-0">Encourages a healthy lifestyle through exercise, workouts, and physical activities</p>
+                        <p class="rating mb-3 mt-0">★★★★★ 5 ratings</p>
+                        <a href="https://www.crunch.com/thehub/the-purpose-of-a-fitness-club/" target="_blank"><button type="button" class="explore"><span class="btn-span-class">Explore More ▶</span></button></a>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+    <div class="no-results align-items-center justify-content-center mt-0 p-0" id="noResults">
+        <img src="image/noresult.gif" alt="" class="text-center">
+        <p class="text-center">Sorry, we couldn't find anything matching your search.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
